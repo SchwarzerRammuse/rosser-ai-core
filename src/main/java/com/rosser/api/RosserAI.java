@@ -19,8 +19,7 @@ public class RosserAI {
         this.openAIService = openAIService;
     }
 
-    public String chat(String spell) throws UnsupportedEncodingException {
-        spell = new String(spell.getBytes(),"UTF-8");
+    public String chat(String spell)  {
         OpenChatMsg openChatMsg = new OpenChatMsg(Role.USER.getValue(),spell,Model.GPT35TURBO.getValue());
         String answer = openAIService.chat(openChatMsg, properties.getApikey());
         return answer;
