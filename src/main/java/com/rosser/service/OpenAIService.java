@@ -7,6 +7,8 @@ import com.rosser.config.Properties;
 import com.rosser.connect.OpenAIConnecter;
 import com.rosser.util.CommonUtil;
 
+import java.util.List;
+
 /**
  * 各个功能的核心实现类
  */
@@ -37,5 +39,4 @@ public class OpenAIService {
         String answer = responseJSON.getJSONArray("choices").getJSONObject(0).getJSONObject("message").getString("content");
         return answer;
     }
-
 }
